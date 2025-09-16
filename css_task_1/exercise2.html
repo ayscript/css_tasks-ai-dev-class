@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5em;
+      }
+
+      body {
+        padding-bottom: 16px;
+        padding-top: 100px;
+        height: 100vh;
+        height: 100svh;
+        background: linear-gradient(45deg, #164f72 0%, #033553 75%);
+        cursor: url('./mouse.png');
+      }
+
+      .card {
+        background: #ffffff12;
+        backdrop-filter: blur(15px);
+        width: 90%;
+        color: #effeee;
+        border: 1px solid #ffffff19;
+        margin-inline: auto;
+        max-width: 480px;
+        border-radius: 32px;
+        padding: 24px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        text-align: center;
+        cursor: default;
+      }
+
+      .card img {
+        width: 100px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 5px solid #2389c9;
+      }
+
+      button{
+        background: #2389c9;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+
+      .about_text{
+        color: #effeee;
+        font-weight: 100;
+        font-size: 14px;
+        line-height: 2em;
+        letter-spacing: 1.5px;
+      }
+
+      .role{
+        font-size: 14px;
+        color: #effeee;
+        font-weight: 300;
+      }
+
+      .btn_wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .whatsapp{
+        background: #187061;
+        box-shadow: 2px 3px 0px #156154;
+        transition: backgroundColor .5s;
+      }
+
+      .whatsapp:hover{
+        background: #114d43;
+      }
+
+      .whatsapp:active{
+        transform: scale(0.98);
+        box-shadow: none;
+      }
+
+      .email-btn{
+        background-color: #2F4FD1;
+        box-shadow: 2px 3px 0px #243da1;
+        transition: backgroundColor .5s;
+      }
+
+      .email-btn:hover{
+        background: #1e3283;
+      }
+
+      .email-btn:active{
+        transform: scale(0.98);
+        box-shadow: none;
+      }
+
+      .gradient-overlay {
+      position: fixed;
+      inset: 0;
+      pointer-events: none; /* so you can still click stuff */
+      background: radial-gradient(circle at 50% 50%, #effeee21, transparent 10%);
+      transition: background-position 0.05s linear;
+    }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="gradient-overlay"></div>
+    <div class="card">
+      <img src="avater.png" alt="my profile picture" />
+      <div>
+        <h1>Ayomide Olaleye</h1>
+        <p class="role">Fullstack AI/Web Developer</p>
+      </div>
+      <p class="about_text">
+        I'm a passionate Fullstack Developer with a keen eye for creating
+        elegant, efficient, and user-friendly AI powered websites. With 3 years
+        of experience in the field, I've developed a strong understanding of web
+        and AI technologies and best practices.
+      </p>
+      <div class="btn_wrapper">
+        <button class="whatsapp">WhatsApp: 07014329650</button>
+        <button class="email-btn">Email: olaleye349@gmail.com</button>
+      </div>
+    </div>
+    <script>
+    const overlay = document.querySelector(".gradient-overlay");
+
+    document.addEventListener("mousemove", (e) => {
+      const x = e.clientX;
+      const y = e.clientY;
+
+      overlay.style.background = `
+        radial-gradient(circle at ${x}px ${y}px,
+        #effeee21, transparent 10%)`;
+    });
+  </script>
+  </body>
+</html>

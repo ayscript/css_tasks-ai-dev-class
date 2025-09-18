@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Favorite Quote</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+      }
+
+      .quote-box {
+        background: #8ff5e0;
+        border: 1px solid #1f9380;
+        color: #115247;
+        width: 90%;
+        max-width: 640px;
+        padding: 16px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: 2px 3px 20px #1f9380;
+        transition: transform 1.2s ease;
+        transform: none;
+      }
+
+      .quote-box:hover{
+        background: #b1f7e9;
+        transform: skewX(2deg);
+      }
+
+      .quote {
+        font-size: 48px;
+        text-align: center;
+        font-family: "Bad Script", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .quote span{
+        font-weight: 700;
+        font-size: 64px;
+      }
+
+      .author {
+        text-align: right;
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quote-box">
+      <p class="quote"><span>"</span> The only way to do great work is to love what you do. <span>"</span></p>
+      <p class="author">- Steve Jobs</p>
+    </div>
+  </body>
+</html>
